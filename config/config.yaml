@@ -1,0 +1,14 @@
+sarima:
+  order: [2, 1, 2]
+  seasonal_order: [1, 0, 1, 7]
+  max_train_size: 760
+  test_size: 7
+
+lightgbm:
+  learning_rate: 0.05
+  num_leaves: 31
+  n_estimators: 100
+
+data:
+  test_size: 0.2
+  rolling_window: 7

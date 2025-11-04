@@ -12,3 +12,4 @@ statsmodels==0.14.5     # for baseline ARIMA/ETS models
 tqdm==4.66.5            # for progress bars
 ipykernel==6.29.5       # for running in Jupyter
 scipy==1.10.1
+nbformat
