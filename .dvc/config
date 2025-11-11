@@ -1,0 +1,7 @@
+[core]
+    remote = dagshub
+['remote "dagshub"']
+    url = https://dagshub.com/elias.reaz/dvc-mlflow-forecasting-pipeline.dvc
+    auth = basic
+    user = elias.reaz
+    password = 322deb1c68fe16c38ea5d0ca62389960a181bb49
