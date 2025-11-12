@@ -1,4 +1,4 @@
-## Toronto Ferry Ticket Sales Forecasting using SARIMA, Prophet: along with DVC and Mlflow
+# Toronto Ferry Ticket Demand Forecasting using SARIMA and Prophet with MLOps Integration (DVC & MLflow)
 
 This project demonstrates a complete time series forecasting workflow using SARIMA and Prophet. It includes preprocessing, exploratory analysis, model fitting, and forecasting for a 30-day horizon. The pipeline is modular, reproducible, and designed for extensibility.
 
@@ -42,9 +42,9 @@ sarima-prophet-mlflow-dvc-pipeline/
 ![Daily redemption count from 2022 onwards](./output/plots/daily_redemption_count_2022_onwards.png)
 
 *Figure: Daily redemption count from 2022 onwards.*
-- We observe yearly seasonality - winter low and summer high 
-- There is also weekly seasonality - weekend high
-- Presence of sudden spikes are visible
+- Yearly seasonality - winter low and summer high 
+- Weekly seasonality - weekend high
+- Presence of spikes on summer days
 
 ### Basic Statistics 
 
@@ -183,7 +183,7 @@ forecast = pd.Series(forecast, index=future_index)
 ```
 ![prophet forecasting](./output/plots/prophet_fold_4.png)
 
-### comparison 30-day forecast
+### Model Evalution: SARIMA vs Prophet (30-day forecast)
 
 A comparison table below showing **SARIMA vs Prophet** on original scale metrics, with **% improvement** of Prophet over SARIMA for each fold:
 
@@ -216,7 +216,6 @@ A comparison table below showing **SARIMA vs Prophet** on original scale metrics
 - Overall, **Prophet** shows **stronger generalization** capturinng both trend and seasonality and **lower error** across all metrics.
 
 ### MLflow Integration with DagsHub
-
 
 This project uses MLflow for experiment tracking, model management, and reproducibility, fully integrated with DagsHub's hosted MLflow server.
 
